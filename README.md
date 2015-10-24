@@ -19,8 +19,8 @@ Step 2. Extract the measurements on the mean and deviation
 Step 3. Name the activities in the data set 
 Master$activities <- as.character(Master$activities)
 Master$activities[Master$activities == 1] <- "Walking"
-Master$activities[Master$activities == 2] <- "Walking Upstairs"
-Master$activities[Master$activities == 3] <- "Walking Downstairs"
+Master$activities[Master$activities == 2] <- "Upstairs"
+Master$activities[Master$activities == 3] <- "Downstairs"
 Master$activities[Master$activities == 4] <- "Sitting"
 Master$activities[Master$activities == 5] <- "Standing"
 Master$activities[Master$activities == 6] <- "Laying"

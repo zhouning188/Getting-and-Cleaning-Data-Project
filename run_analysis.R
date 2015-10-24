@@ -22,14 +22,14 @@ Master <- rbind(XTrain, XTest)
 duplicated(colnames(Master))
 Master <- Master[, !duplicated(colnames(Master))]
 Mean <- grep("mean()", names(Master), value = FALSE, fixed = TRUE)
-Mean <- append(Mean, 471:477)
+Mean <- append(Mean, 470:477)
 InstrumentMeanMatrix <- Master[Mean]
 STD <- grep("std()", names(Master), value = FALSE)
 InstrumentSTDMatrix <- Master[STD]
 Master$activities <- as.character(Master$activities)
 Master$activities[Master$activities == 1] <- "Walking"
-Master$activities[Master$activities == 2] <- "Walking Upstairs"
-Master$activities[Master$activities == 3] <- "Walking Downstairs"
+Master$activities[Master$activities == 2] <- "Upstairs"
+Master$activities[Master$activities == 3] <- "Downstairs"
 Master$activities[Master$activities == 4] <- "Sitting"
 Master$activities[Master$activities == 5] <- "Standing"
 Master$activities[Master$activities == 6] <- "Laying"
